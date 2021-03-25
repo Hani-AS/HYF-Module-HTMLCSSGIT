@@ -1,0 +1,9 @@
+-challenge 1-
+.<filename>     // adding a . in front of a file name will make it hidden.
+ls -a           // adding -a to a ls command will list all files including hidden ones.
+
+-challenge 2-
+mkdir -p        // adding -p to mkdir, followed by the folders names will create nested directories.
+
+-challenge 3-
+echo -e, \n, >> // echo -e followed by a text, followed by \n to get a new line, followed by an redirection operator >>.
