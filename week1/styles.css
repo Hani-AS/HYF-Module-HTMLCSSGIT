@@ -1,0 +1,174 @@
+* {
+    margin: 0;   
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%; /* =10px */
+  }
+
+h1 { 
+    font-size: 2.4rem; 
+} /* =24px */
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+p { 
+    font-size: 1.4rem; 
+} /* =14px */
+
+li { 
+    font-size: 1.4rem;
+} /* =14px? */
+
+h1, h2, h3, h4 {
+    color: #14213d;
+}
+
+  .grid-container {
+      width: 60%;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr 1fr 0.5fr 0.5fr;
+      /* grid-row-gap: 20px; */
+      border: solid 5px #14213d;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.80);
+  }
+
+
+
+  /*////////////////////////
+            Header
+  /////////////////////////*/
+  .header {
+    display: grid;
+    grid-column: 1 / span 2;
+    background-color: #e5e5e5;
+    grid-template-columns: 1fr 2fr;
+  }
+
+.title-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+h1 {
+    color: #14213d;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.6rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h1 span {
+    font-size: 1.4rem;
+    color: #FCA311;
+    line-height: 1rem;
+}
+
+.img-container {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header p {
+    font-weight: 300;
+    font-style: italic;
+    max-width: 65ch;
+    margin: 40px 40px 20px 40px;
+}
+
+.info-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+}
+
+.header ul {
+    margin: 5px 40px 40px 40px;
+    list-style: none;
+}
+
+/*////////////////////
+        Main
+//////////////////// */
+
+.experience-title {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.experience-title h2, .education-title h2, .skills-title h2 {
+    font-weight: 700;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.no-style {
+    list-style: none;
+}
+
+.experience-text, .education-text, .skills-text {
+    margin: 0 40px 0 40px;
+    padding: 20px 0 20px 0;
+    border-bottom: 3px solid #14213d;
+}
+
+.li-p {
+    margin-top: 10px;
+    max-width: 65ch;
+    font-style: italic;
+}
+
+.second-ul {
+    margin-top: 40px;
+}
+
+.skills-text {
+    border-bottom: none;
+}
+
+.centering-container {
+    max-width: 150px;
+    max-height: 20px;
+    margin: 0 auto;
+}
+
+
+
+ 
+
+
+
+
+
