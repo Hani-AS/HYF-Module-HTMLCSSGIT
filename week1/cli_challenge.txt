@@ -1,9 +1,9 @@
--challenge 1-
+How do I create a hidden file or folder? How do I display it in the CLI?
 .<filename>     // adding a . in front of a file name will make it hidden.
 ls -a           // adding -a to a ls command will list all files including hidden ones.
 
--challenge 2-
+How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
 mkdir -p        // adding -p to mkdir, followed by the folders names will create nested directories.
 
--challenge 3-
-echo -e, \n, >> // echo -e followed by a text, followed by \n to get a new line, followed by an redirection operator >>.
+How do I append a message to a file, without a newline character?
+echo -e, \n, >> [filename.txt] // echo -e "this is a new line \nthis is another new line" >> file.txt
