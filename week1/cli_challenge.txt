@@ -6,4 +6,4 @@ How do I create multiple nested directories, like /c/Users/myusername/these/fold
 mkdir -p        // adding -p to mkdir, followed by the folders names will create nested directories.
 
 How do I append a message to a file, without a newline character?
-echo -e, \n, >> [filename.txt] // echo -e "this is a new line \nthis is another new line" >> file.txt
+echo -e, \n, >> [filename.txt] // echo -e "this is a new line \n this is another new line" >> filename.txt
