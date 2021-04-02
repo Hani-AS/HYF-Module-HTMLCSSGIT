@@ -8,6 +8,7 @@
     font-size: 62.5%; /* =10px */
   }
 
+
 h1 { 
     font-size: 2.4rem; 
 } /* =24px */
@@ -52,16 +53,33 @@ h1, h2, h3, h4 {
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.80);
   }
 
-
+  @media screen and (max-width: 800px) {
+      .grid-container {
+          width: 80%;
+      }
+  }
+  @media screen and (max-width: 600px) {
+      .grid-container {
+          display: block;
+          width: 90%;
+      }
+  }
 
   /*////////////////////////
             Header
   /////////////////////////*/
   .header {
+    max-width: 100%;
     display: grid;
     grid-column: 1 / span 2;
     background-color: #e5e5e5;
     grid-template-columns: 1fr 2fr;
+  }
+
+  @media screen and (max-width: 600px) {
+      .header {
+          display: block;
+      }
   }
 
 .title-container {
@@ -75,11 +93,11 @@ h1 {
     font-style: italic;
     line-height: 1.6rem;
     text-align: center;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 h1 span {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #FCA311;
     line-height: 1rem;
 }
@@ -88,6 +106,7 @@ h1 span {
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    /* border: 5px solid #FCA311; */
     margin: 0 auto;
     margin-top: 20px;
     overflow: hidden;
@@ -105,17 +124,22 @@ img {
     font-weight: 300;
     font-style: italic;
     max-width: 65ch;
-    margin: 40px 40px 20px 40px;
+    padding-bottom: 2rem;
 }
 
 .info-container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    align-self: center;
+    padding: 10rem 4rem 4rem 4rem;
+}
+
+@media screen and (max-width: 600px) {
+    .info-container {
+        padding: 4rem;
+    }
 }
 
 .header ul {
-    margin: 5px 40px 40px 40px;
     list-style: none;
 }
 
@@ -128,19 +152,23 @@ img {
     grid-row: 2 / 3;
 }
 
-.experience-title h2, .education-title h2, .skills-title h2 {
+.experience-title h2, 
+.education-title h2, 
+.skills-title h2 {
     font-weight: 700;
     padding-top: 20px;
     text-align: left;
+    color: #FCA311;
 }
 
 .no-style {
     list-style: none;
 }
 
-.experience-text, .education-text, .skills-text {
-    margin: 0 40px 0 40px;
-    padding: 20px 0 20px 0;
+.experience-text, 
+.education-text, 
+.skills-text {
+    padding: 20px 40px 20px 40px;
     border-bottom: 3px solid #14213d;
 }
 
@@ -162,6 +190,14 @@ img {
     max-width: 150px;
     max-height: 20px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .centering-container {
+        max-width: 300px;
+        padding-left: 4rem;
+        margin: 0;
+    }
 }
 
 
