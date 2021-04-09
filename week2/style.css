@@ -94,7 +94,7 @@ h3 {
 }
 
 section {
-    background-color: black;
+    background-color: green;
 }
 
 
@@ -115,30 +115,29 @@ section {
 
 .grid-floats li {
     border: solid 2px black;
-    position: relative;
     text-align: center;
-    margin-bottom: 4rem;
-    background-color: #fff;
+    background-color: rebeccapurple;
+    border-radius: 10%;
+    overflow: hidden;
 }
 
 img {
     display: block;
-    width: clamp(30%, 50%, 80%);
-    margin: 0 auto
+    width: 70%;
+    margin: 0 auto;
 }
 
 .grid-floats p {
     font-size: clamp(1rem, 0.6992rem + 1.5038vw, 1.6rem);
     max-width: 65ch;
-    height: clamp(4rem, 5rem, 6rem);
-    margin: 0 1.5rem clamp(3rem, 4rem, 5rem) 1.5rem;
+    margin: 0 1.5rem clamp(.5rem, 1rem, 2rem) 1.5rem;
 }
 
 /*/////////////////////////////////
 tablet-size between 600px and 1024px
 /////////////////////////////////*/
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
 
     .grid-floats > li:nth-child(-n+2) {
         float: left;
@@ -156,12 +155,42 @@ tablet-size between 600px and 1024px
 
     .grid-floats h3 {
         font-size: clamp(1.4rem, 1.1170rem + 0.4717vw, 1.6rem);
+        margin-top: 2rem;
     }
 
     .grid-floats p {
-        height: clamp(7rem, 10rem, 15rem);
-        font-size: clamp(1rem, 0.1509rem + 1.4151vw, 1.6rem);
-        margin: 0 1.5rem clamp(.5rem, 1rem, 2.5rem) 1.5rem;
+        height: 7rem;
+        font-size: clamp(1rem, 0.2925rem + 1.1792vw, 1.5rem);
+        margin: 0 1.5rem 2.5rem 1.5rem;
+    }
+}
+
+/*/////////////////////////////////
+    desktop-size above 1024px
+/////////////////////////////////*/
+
+@media only screen and (min-width: 1025px) {
+
+    .grid-floats > li:first-child {
+        width: 50%;
     }
 
-}
+    .grid-floats > li:nth-child(2) {
+        width: 25%;
+    }
+
+    .grid-floats > li:nth-child(3) {
+        width: 25%;
+    }
+
+    .grid-floats > li:nth-child(n+4) {
+        width: calc(100% / 4);
+    }
+
+    .grid-floats > li:nth-child(n+2) p {
+        margin-bottom: 8rem;
+    }
+
+    .grid-floats > li:first-child img {
+        width: clamp(25rem, 7.1739rem + 17.3913vw, 27rem);
+    }
