@@ -1,0 +1,167 @@
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v17-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v17-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v17-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v17-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v17-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v17-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v17-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v17-latin-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v17-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v17-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v17-latin-900.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v17-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v17-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* lato-900italic - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 900;
+    src: url('../fonts/lato-v17-latin-900italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v17-latin-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v17-latin-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v17-latin-900italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v17-latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v17-latin-900italic.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+header {
+    display: block;
+    background-color: blueviolet;
+}
+
+h1 {
+    font-size: 6.4rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    background-color: #fff;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+section {
+    background-color: black;
+}
+
+
+/*/////////////////////////////////
+//////Mobile-size below 600px//////
+/////////////////////////////////*/
+
+.grid-floats {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.grid-floats::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.grid-floats li {
+    border: solid 2px black;
+    position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+    background-color: #fff;
+}
+
+img {
+    display: block;
+    width: clamp(30%, 50%, 80%);
+    margin: 0 auto
+}
+
+.grid-floats p {
+    font-size: clamp(1rem, 0.6992rem + 1.5038vw, 1.6rem);
+    max-width: 65ch;
+    height: clamp(4rem, 5rem, 6rem);
+    margin: 0 1.5rem clamp(3rem, 4rem, 5rem) 1.5rem;
+}
+
+/*/////////////////////////////////
+tablet-size between 600px and 1024px
+/////////////////////////////////*/
+
+@media screen and (min-width: 600px) {
+
+    .grid-floats > li:nth-child(-n+2) {
+        float: left;
+        width: calc(100% / 2);
+    }
+
+    .grid-floats > li:nth-child(n+3) {
+        float: left;
+        width: calc(100% / 3);
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+
+    .grid-floats h3 {
+        font-size: clamp(1.4rem, 1.1170rem + 0.4717vw, 1.6rem);
+    }
+
+    .grid-floats p {
+        height: clamp(7rem, 10rem, 15rem);
+        font-size: clamp(1rem, 0.1509rem + 1.4151vw, 1.6rem);
+        margin: 0 1.5rem clamp(.5rem, 1rem, 2.5rem) 1.5rem;
+    }
+
+}
