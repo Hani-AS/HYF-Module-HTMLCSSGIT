@@ -74,7 +74,8 @@
     font-weight: 400;
     /* background-color: #ffe8d6; */
     background-image: linear-gradient(to right bottom, rgba(27, 1, 75, 0), rgba(78, 78, 78, 0.9)), url(images/pexels.jpg);
-    background-size: contain;
+    background-size: cover;
+    
 }
 
 ul, ol {
@@ -90,17 +91,13 @@ header {
 h1 {
     font-size: 8rem;
     color: #ffe8d6;
-    filter: drop-shadow(1.5rem 1.5rem .5rem #222);
-    padding-left: 2rem;
-
-    
+    filter: drop-shadow(1.5rem 1.5rem .5rem #222);  
 }
 
 h2 {
     font-size: 2.2rem;
     max-width: 102.5rem;
     margin: 0 auto;
-    padding-left: 2rem;
     color: #ddbea9;
     font-weight: 700;
     font-size: 3.2rem;
@@ -108,6 +105,7 @@ h2 {
 
 h3 {
     font-size: 1.6rem;
+    color: #0f0906;
 }
 
 
@@ -118,9 +116,19 @@ h3 {
 //////Mobile-size below 600px//////
 /////////////////////////////////*/
 
+h1, h2 {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
 .grid-floats {
-    max-width: 102.5rem;
+    max-width: 85%;
     margin: 0 auto;
+    padding: 0;
 }
 
 .grid-floats::after {
@@ -129,23 +137,84 @@ h3 {
     clear: both;
 }
 
-.grid-floats li {
-    border: solid .5rem white;
-    /* text-align: center; */
-    /* background-color: rebeccapurple; */
-    border-radius: 10%;
+.grid-floats > li {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1rem rgba(255, 255, 255, 0.1);
     overflow: hidden;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1rem);
+    transition: 0.5s all;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.2),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.144),
+    0 12.5px 10px rgba(0, 0, 0, 0.119),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.1),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.081),
+    0 100px 80px rgba(0, 0, 0, 0.056);
 }
+
+.grid-floats > li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to right, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    z-index: 2;
+    transition: 1s;
+    opacity: 0;
+}
+
+
+.grid-floats > li:hover::before {
+    opacity: 1;
+}
+
 
 img {
     display: block;
-    max-width: 100%;
+    position: absolute;
+    max-width: 50%;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    filter: drop-shadow(1.5rem 1.5rem .5rem #222);
 }
 
-.grid-floats p {
+.grid-floats > li p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    color: #ffe8d6;
     font-size: clamp(1rem, 0.6992rem + 1.5038vw, 1.6rem);
     font-style: italic;
-    margin: 0 1.5rem clamp(.5rem, 1rem, 2rem) 1.5rem;
+    transform: translateX(-20rem) translateY(10rem);
+    transition: 1s;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(230, 218, 218, 0.1);
+    padding: 1rem 2rem;
+    backdrop-filter: blur(.1rem);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
+    font-size: clamp(1.3rem, 0.8755rem + 0.7075vw, 1.6rem);
+
+}
+
+.grid-floats > li:hover p {
+    opacity: 1;
+    transform: translateY(0px);
+
 }
 
 /*/////////////////////////////////
@@ -157,6 +226,12 @@ tablet-size between 600px and 1024px
     h1, h2 {
         max-width: 90%;
         margin: 0 auto;
+        padding-left: 2rem;
+        text-align: left;
+    }
+
+    h2 {
+        margin-bottom: 0;
     }
 
     .grid-floats > li h3 {
@@ -165,6 +240,7 @@ tablet-size between 600px and 1024px
         text-align: center;
         padding: 0 1rem;
         font-weight: 700;
+        position: relative;
     }
 
     .grid-floats {
@@ -175,11 +251,8 @@ tablet-size between 600px and 1024px
     .grid-floats > li {
         height: 25rem;
         margin: 0.5rem;
-        position: relative;
-        border-radius: 0;
         border: 0;
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(1rem);
+        border-radius: 0;
         box-shadow:
         0 2.8px 3.6px rgba(0, 0, 0, 0.15),
         0 6.7px 8.6px rgba(0, 0, 0, 0.108),
@@ -187,66 +260,11 @@ tablet-size between 600px and 1024px
         0 22.3px 29px rgba(0, 0, 0, 0.075),
         0 41.8px 54.3px rgba(0, 0, 0, 0.061),
         0 100px 130px rgba(0, 0, 0, 0.042);
-        transition: 0.5s all;
-    }
-
-    .grid-floats > li::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        background: #D38312;  /* fallback for old browsers */
-        background: linear-gradient(to right bottom, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
-        z-index: 2;
-        transition: 1s;
-        opacity: 0;
-    }
-
-
-    .grid-floats > li:hover::before {
-        opacity: 1;
     }
 
     
     .grid-floats img {
         max-width: 80%;
-        position: absolute;
-        margin: auto;
-        top: 0; left: 0; bottom: 0; right: 0;
-        object-fit: cover;
-        filter: drop-shadow(1.5rem 1.5rem .5rem #222);
-        padding: 2rem 2rem;
-    }
-
-    .grid-floats > li p {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
-        opacity: 0;
-        color: #ffe8d6;
-        transform: translateX(-20rem) translateY(10rem);
-        transition: 1s;
-        margin-bottom: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(230, 218, 218, 0.1);
-        padding: 1rem 2rem;
-        backdrop-filter: blur(.1rem);
-        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
-        font-size: clamp(1.3rem, 0.8755rem + 0.7075vw, 1.6rem);
-
-    }
-
-    .grid-floats > li:hover p {
-        opacity: 1;
-        transform: translateY(0px);
-
     }
 
     .grid-floats > li:nth-child(-n+2) {
