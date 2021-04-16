@@ -1,0 +1,75 @@
+/* *,
+*::after,
+*::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      box-sizing: inherit;
+      backface-visibility: hidden;
+  } */
+
+
+/* .brand-logo {
+    width: 6.250rem;
+}
+
+nav a {
+    color: #00112c !important;
+}
+
+nav a:hover {
+    border-top: #0abf53 solid 4px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0) !important
+}
+
+.no-style:hover {
+    border-top: hidden;
+}
+
+.search-icon {
+    margin-left: 180px;
+    font-size: 20px !important;
+}
+
+.material-icons:hover {
+    border-top: #0abf53 solid 4px !important;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #0abf53 !important;
+    color: #fff !important;
+}
+
+.btn:hover {
+    background-color: #078f3e !important;
+    color: #fff !important;
+} */
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.btn-primary {
+    background-color: #0abf53 !important;
+    border-color: #0abf53;
+}
+
+.btn-primary:hover {
+    background-color: #078f3e !important;
+    border-color: #0abf53;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.nav-link {
+    border-top: 4px solid transparent;
+}
+
+.nav-link:hover {
+    border-top: 4px solid #0abf53;
+}
+
