@@ -158,6 +158,53 @@ nav a:hover {
     }
 }
 
+/* section-02 */
+.img-size {
+    max-width: 40px;
+    max-height: 40px;
+    margin-bottom: 24px;
+}
+
+.body-big {
+    padding-top: 12px;
+}
+
+.col--nb {
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .area-padding {
+    padding-top: 96px;
+    padding-bottom: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 40px;
+}
+
+.col--nb {
+    margin-bottom: 48px;
+}
+}
+
+.area--light-grey {
+    background-color: #f3f6f9 !important;
+}
+
+.column-buttons {
+    padding: 12px 24px;
+}
+
+.green-tertiary {
+    color: #0abf53 !important;
+
+}
+
+.fa-chevron-right {
+    font-size: 10px !important;
+    padding-left: 3px;
+}
+
 
 
 
