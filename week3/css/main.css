@@ -75,7 +75,12 @@ nav a:hover {
 
 .btn-primary:hover {
     background-color: #078f3e !important;
-    border-color: #0abf53;
+    border-color: #0abf53 !important;
+}
+
+.btn-primary:focus {
+    box-shadow: none !important;
+    border-color: #0abf53 !important;
 }
 
 .align-middle {
@@ -147,6 +152,11 @@ nav a:hover {
     }
 }
 
+@media (min-width: 768px) {
+    .area--padding-medium {
+        padding-top: 48px !important;
+    }
+}
 
 
 
