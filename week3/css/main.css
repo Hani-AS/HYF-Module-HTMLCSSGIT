@@ -52,7 +52,6 @@ nav a:hover {
 }
 .nav-item {
     color: #00112c !important;
-    font-weight: 400 !important;
 }
 
 /* .dropdown:hover > .dropdown-menu {
@@ -119,13 +118,11 @@ nav a:hover {
     font-weight: 600;
 }
 
-/* section 01 */
+.navbar-toggler-icon {
+    background-image: url(../img/hamburger.svg) !important;
+}
 
-@media (min-width: 768px) {
-    .offset-md-1 {
-        margin-left: 8.33333%;
-}
-}
+/* section 01 */
 
 .heading-h0 {
     font-size: 40px;
@@ -138,6 +135,16 @@ nav a:hover {
     font-size: 64px;
     line-height: 74px;
 }
+}
+
+@media (max-width: 767.98px) {
+    .col-spacer .col-spacer-mobile--medium {
+    padding-top: 24px;
+}
+
+    .row {
+        padding-top: 24px;
+    }
 }
 
 
