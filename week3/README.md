@@ -1,1 +1,1 @@
-Adyen clone page link <a href="https://hani-as.github.io/Adyen-clone/"></a>
+Adyen clone page link https://hani-as.github.io/Adyen-clone "Adyen clone page link"
