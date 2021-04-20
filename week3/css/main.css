@@ -305,9 +305,105 @@
 .s6-btn {
     background-color: #00112c !important;
     border-color: #00112c !important;
+    box-shadow: none !important;
 }
 
-.s6-btn {
+.s6-btn:hover {
     box-shadow: none !important;
-    border-color: #00112c !important;
+    background-color: #1b2b44 !important;
+    border-color: #1b2b44 !important;
 }
+
+/* Footer */
+
+.footer {
+    background-color: #00112c;
+    color: #fff;
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding-top: 96px;
+    }
+}
+
+.footer-title {
+    font-weight: bold;
+}
+
+.list-unstyled a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.list-unstyled li {
+    padding-bottom: 10px;
+}
+
+.footer .row .col {
+    padding: 0 24px;
+}
+
+
+/* Footer-form */
+.form-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    border-radius: unset;
+    margin-bottom: 12px;
+}
+
+.form-control {
+    color: #a5afbd;
+    font-weight: bold;
+    background-color: #00112c;
+    border-radius: unset;
+}
+
+.form-text {
+    font-size: 12px;
+    color: #a5afbd;
+}
+
+.footer-btn {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: unset;
+}
+
+.footer-btn:focus,
+.footer-btn:hover,
+.footer-btn:active {
+    background-color: #fff;
+    border: none;
+    box-shadow: none !important;
+}
+
+.fa-angle-right {
+    color: #00112c !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.link-box {
+    height: 44px;
+    width: 44px;
+    border: solid 1px #374661;
+    margin-right: 12px;
+}
+
+.fa-linkedin,
+.fa-twitter,
+.fa-facebook {
+    color: #a5afbd;
+    text-decoration: none;
+}
+
